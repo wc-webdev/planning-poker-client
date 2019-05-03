@@ -1,0 +1,35 @@
+:root {
+  --animation-duration: 350ms;
+  --easing: ease;
+  --theme-change-padding: 4;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: var(--theme-font-family-base);
+  background-color: var(--theme-color-bg);
+  font-variant-numeric: proportional-nums;
+  color: var(--theme-color-fg);
+  user-select: none;
+  height: 100%;
+
+  transition-property: background-color, color;
+  transition-duration: calc(var(--animation-duration) * var(--theme-change-padding));
+  transition-timing-function: var(--easing);
+}
+
+#root {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  min-height: 100%;
+}
